@@ -1,0 +1,8 @@
+{
+  "name": "turnos-odontologia",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/agenda.test.ts"
+  }
+}
