@@ -3,11 +3,12 @@ export type Minuto = number;
 export type Turno = {
   profesionalId: string;
   sillonId: string;
+  fichaId: string;
   inicio: Minuto;
   fin: Minuto;
 };
 
-export type MotivoRechazo = "profesional" | "sillon" | "duracion";
+export type MotivoRechazo = "profesional" | "sillon" | "duracion" | "ficha";
 
 export class TurnoRechazado extends Error {
   readonly motivo: MotivoRechazo;
@@ -26,6 +27,10 @@ export function seSolapan(a: Turno, b: Turno): boolean {
 export function crearTurno(agenda: readonly Turno[], pedido: Turno): Turno[] {
   if (pedido.fin <= pedido.inicio) {
     throw new TurnoRechazado("duracion");
+  }
+
+  if (pedido.fichaId.trim() === "") {
+    throw new TurnoRechazado("ficha");
   }
 
   const chocaProfesional = agenda.some(

@@ -6,12 +6,12 @@
 - Rechazar solapamiento de profesional.
 - Rechazar solapamiento de sillón.
 - Aceptar el turno que empieza cuando otro termina.
+- Ficha mínima: identificador opaco en el turno. El alta sin ese texto se rechaza.
 
 ## Imprescindible, no implementado
 
 - Reserva por enlace.
 - Confirmación, cancelación y reprogramación.
-- Ficha mínima asociada al turno.
 
 ## Diferenciador, no implementado
 

@@ -9,7 +9,8 @@ const turno = (
   sillonId: string,
   inicio: number,
   fin: number,
-): Turno => ({ profesionalId, sillonId, inicio, fin });
+  fichaId = "F1",
+): Turno => ({ profesionalId, sillonId, fichaId, inicio, fin });
 
 describe("agenda-turnos", () => {
   it("registra un turno cuando la agenda está vacía", () => {
@@ -44,5 +45,48 @@ describe("agenda-turnos", () => {
     const agenda = crearTurno([existente], pedido);
     assert.equal(agenda.length, 2);
     assert.deepEqual(agenda[1], pedido);
+  });
+
+  it("rechaza el alta cuando la ficha está vacía", () => {
+    const agenda: Turno[] = [];
+    const pedido = turno("P1", "S1", de(9, 0), de(9, 40), "");
+    assert.throws(() => crearTurno(agenda, pedido), (error: unknown) => {
+      assert.ok(error instanceof TurnoRechazado);
+      assert.equal(error.motivo, "ficha");
+      return true;
+    });
+    assert.deepEqual(agenda, []);
+  });
+
+  it("rechaza el alta cuando la ficha es solo espacios", () => {
+    const agenda: Turno[] = [];
+    const pedido = turno("P1", "S1", de(9, 0), de(9, 40), "   ");
+    assert.throws(() => crearTurno(agenda, pedido), (error: unknown) => {
+      assert.ok(error instanceof TurnoRechazado);
+      assert.equal(error.motivo, "ficha");
+      return true;
+    });
+    assert.deepEqual(agenda, []);
+  });
+
+  it("acepta la misma ficha en turnos contiguos", () => {
+    const existente = turno("P1", "S1", de(9, 0), de(9, 40), "F1");
+    const pedido = turno("P1", "S2", de(9, 40), de(10, 20), "F1");
+    const agenda = crearTurno([existente], pedido);
+    assert.equal(agenda.length, 2);
+    assert.equal(agenda[0].fichaId, "F1");
+    assert.equal(agenda[1].fichaId, "F1");
+  });
+
+  it("rechaza por profesional aunque la ficha sea otra", () => {
+    const existente = turno("P1", "S1", de(9, 0), de(9, 40), "F1");
+    const pedido = turno("P1", "S2", de(9, 20), de(10, 0), "F2");
+    const agenda = [existente];
+    assert.throws(() => crearTurno(agenda, pedido), (error: unknown) => {
+      assert.ok(error instanceof TurnoRechazado);
+      assert.equal(error.motivo, "profesional");
+      return true;
+    });
+    assert.deepEqual(agenda, [existente]);
   });
 });
