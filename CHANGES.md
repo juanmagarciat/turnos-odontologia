@@ -74,6 +74,10 @@ Riesgo: asignar el hueco sin volver a comprobar solapamientos.
 
 Estado: archivado el 2026-11-04.
 
+## Organización
+
+`separar-backend`, archivado el 2026-11-04. No agrega comportamiento. El dominio y los tests quedan en `backend/`. La fundación sigue en la raíz.
+
 ## Fuera de este roadmap
 
 Odontograma, imágenes, AFIP/ARCA, obras sociales, WhatsApp Business API, firma digital y multi-sede. El informe los deja en etapas posteriores o sin evidencia uniforme.

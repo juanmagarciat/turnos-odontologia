@@ -4,7 +4,7 @@ Sistema de turnos para consultorios odontológicos en Argentina. El comportamien
 
 ## Stack
 
-TypeScript y Node.js 24. Tests con `node:test` mediante `npm test`. Sin dependencias de producción y sin interfaz gráfica en el change archivado.
+TypeScript y Node.js 24. Tests con `node:test` mediante `npm test` dentro de `backend/`. Sin dependencias de producción y sin interfaz gráfica.
 
 ## Reglas
 

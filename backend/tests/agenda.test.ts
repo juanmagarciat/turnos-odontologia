@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { crearTurno, TurnoRechazado, type Turno } from "../src/agenda/turno.ts";
+import { crearTurno, TurnoRechazado, type Turno } from "../src/dominio/index.ts";
 
 const de = (hora: number, minuto: number) => hora * 60 + minuto;
 

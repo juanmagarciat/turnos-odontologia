@@ -6,7 +6,7 @@ import {
   type Enlace,
   type Reserva,
   type Turno,
-} from "../src/agenda/turno.ts";
+} from "../src/dominio/index.ts";
 
 const de = (hora: number, minuto: number) => hora * 60 + minuto;
 

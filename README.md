@@ -8,9 +8,10 @@ No hay pantalla ni base de datos. Los ejemplos usan identificadores `P1`, `S1`, 
 
 ## Cómo correr los tests
 
-Hace falta Node.js 24.
+Hace falta Node.js 24. Los tests se corren dentro de `backend/`.
 
 ```bash
+cd backend
 npm test
 ```
 
@@ -29,7 +30,7 @@ La knowledge-base está en `knowledge-base/`. El plan de lo que sigue está en `
 
 | Ruta | Contenido |
 | --- | --- |
-| `src/agenda/turno.ts` | Alta, ficha, enlace, confirmación, cancelación, reprogramación y espera |
-| `tests/` | Escenarios de la spec |
+| `backend/src/dominio/` | Turnos, reserva, estado y espera |
+| `backend/tests/` | Escenarios de la spec |
 | `openspec/specs/agenda-turnos/spec.md` | Comportamiento vigente |
 | `openspec/changes/archive/` | Changes cerrados |
