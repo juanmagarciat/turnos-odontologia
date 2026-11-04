@@ -17,7 +17,7 @@ La seña queda después de la reserva y no bloquea la lista de espera. No hay pa
 ## Camino crítico
 
 1. Crear un turno sin solapamientos. Estado: implementado y archivado el 2026-10-07.
-2. Ficha mínima del turno.
+2. Ficha mínima del turno. Estado: implementado y archivado el 2026-11-04.
 3. Reserva por enlace.
 4. Confirmar, cancelar y reprogramar.
 5. Lista de espera.
@@ -42,7 +42,7 @@ Dependencias: change 1.
 
 Riesgo: convertir la ficha en historia clínica.
 
-Estado: pendiente.
+Estado: archivado el 2026-11-04.
 
 ### 3. reserva-por-enlace
 
