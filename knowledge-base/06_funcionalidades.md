@@ -7,10 +7,10 @@
 - Rechazar solapamiento de sillón.
 - Aceptar el turno que empieza cuando otro termina.
 - Ficha mínima: identificador opaco en el turno. El alta sin ese texto se rechaza.
+- Reserva por enlace: un identificador de enlace nombra un hueco y el alta lo acepta o lo deja disponible.
 
 ## Imprescindible, no implementado
 
-- Reserva por enlace.
 - Confirmación, cancelación y reprogramación.
 
 ## Diferenciador, no implementado

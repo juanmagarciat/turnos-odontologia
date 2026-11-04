@@ -18,7 +18,7 @@ La seña queda después de la reserva y no bloquea la lista de espera. No hay pa
 
 1. Crear un turno sin solapamientos. Estado: implementado y archivado el 2026-10-07.
 2. Ficha mínima del turno. Estado: implementado y archivado el 2026-11-04.
-3. Reserva por enlace.
+3. Reserva por enlace. Estado: implementado y archivado el 2026-11-04.
 4. Confirmar, cancelar y reprogramar.
 5. Lista de espera.
 
@@ -52,7 +52,7 @@ Dependencias: change 2.
 
 Riesgo: publicar un enlace que escriba datos reales en el repositorio.
 
-Estado: pendiente.
+Estado: archivado el 2026-11-04.
 
 ### 4. confirmar-cancelar-reprogramar
 

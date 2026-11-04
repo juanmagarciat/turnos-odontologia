@@ -16,4 +16,11 @@
 2. El pedido del mismo profesional empieza a las 09:40 en otro sillón.
 3. El alta se acepta.
 
-Cancelación, reprogramación y reserva del paciente no tienen flujo implementado.
+## Reserva por enlace
+
+1. El enlace nombra profesional, sillón e intervalo.
+2. `reservarPorEnlace` pide el alta con la ficha recibida.
+3. Si el alta entra, el turno queda y el enlace pasa a usado.
+4. Si el alta rechaza, o el enlace no existe, o ya estaba usado, la agenda no cambia.
+
+Cancelación y reprogramación no tienen flujo implementado.
