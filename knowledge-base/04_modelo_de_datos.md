@@ -9,6 +9,7 @@
 | fichaId | Texto de la ficha. No es un nombre de persona. |
 | inicio | Minuto de inicio, incluido. |
 | fin | Minuto de fin, excluido. |
+| estado | `reservado` o `confirmado`. |
 
 No hay otra entidad. El identificador de ficha no guarda más datos.
 

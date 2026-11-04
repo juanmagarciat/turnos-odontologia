@@ -10,7 +10,7 @@ const turno = (
   inicio: number,
   fin: number,
   fichaId = "F1",
-): Turno => ({ profesionalId, sillonId, fichaId, inicio, fin });
+): Turno => ({ profesionalId, sillonId, fichaId, inicio, fin, estado: "reservado" });
 
 describe("agenda-turnos", () => {
   it("registra un turno cuando la agenda está vacía", () => {

@@ -16,7 +16,7 @@ const turno = (
   inicio: number,
   fin: number,
   fichaId = "F1",
-): Turno => ({ profesionalId, sillonId, fichaId, inicio, fin });
+): Turno => ({ profesionalId, sillonId, fichaId, inicio, fin, estado: "reservado" });
 
 const enlace = (
   enlaceId: string,

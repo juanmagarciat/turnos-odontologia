@@ -23,4 +23,20 @@
 3. Si el alta entra, el turno queda y el enlace pasa a usado.
 4. Si el alta rechaza, o el enlace no existe, o ya estaba usado, la agenda no cambia.
 
-Cancelación y reprogramación no tienen flujo implementado.
+## Confirmación
+
+1. El turno está en la agenda.
+2. `confirmarTurno` lo deja en `confirmado`.
+3. El intervalo sigue ocupado.
+
+## Cancelación
+
+1. `cancelarTurno` saca el turno.
+2. Ese intervalo vuelve a poder registrarse.
+3. Si el turno no está, el motivo es `ausente` y la agenda no cambia.
+
+## Reprogramación
+
+1. El destino se valida con `crearTurno` sin contar el turno que se mueve.
+2. Si el destino entra, la ficha se conserva y el turno queda en el horario nuevo.
+3. Si el destino se rechaza, el turno original sigue igual.
