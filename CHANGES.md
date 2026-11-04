@@ -20,7 +20,7 @@ La seña queda después de la reserva y no bloquea la lista de espera. No hay pa
 2. Ficha mínima del turno. Estado: implementado y archivado el 2026-11-04.
 3. Reserva por enlace. Estado: implementado y archivado el 2026-11-04.
 4. Confirmar, cancelar y reprogramar. Estado: implementado y archivado el 2026-11-04.
-5. Lista de espera.
+5. Lista de espera. Estado: implementado y archivado el 2026-11-04.
 
 ## Changes
 
@@ -66,13 +66,13 @@ Estado: archivado el 2026-11-04.
 
 ### 5. lista-de-espera
 
-Contexto: diferenciador de la sección D. Al liberar un horario, queda un lugar de espera. No está implementada.
+Contexto: diferenciador de la sección D. Al liberar un horario, la primera espera que el alta acepta pasa a turno.
 
 Dependencias: change 4.
 
 Riesgo: asignar el hueco sin volver a comprobar solapamientos.
 
-Estado: pendiente.
+Estado: archivado el 2026-11-04.
 
 ## Fuera de este roadmap
 

@@ -14,10 +14,13 @@
 
 Ninguno del MVP. La seña sigue como diferenciador.
 
+## Diferenciador, implementado
+
+- Lista de espera. Al asignar, la primera espera que el alta acepta pasa a turno reservado. Las demás siguen en la lista.
+
 ## Diferenciador, no implementado
 
 - Seña.
-- Lista de espera al liberar un horario.
 
 ## Etapas posteriores
 

@@ -40,3 +40,10 @@
 1. El destino se valida con `crearTurno` sin contar el turno que se mueve.
 2. Si el destino entra, la ficha se conserva y el turno queda en el horario nuevo.
 3. Si el destino se rechaza, el turno original sigue igual.
+
+## Lista de espera
+
+1. `anotarEspera` guarda identificador, ficha, profesional, sillón e intervalo. No crea un turno.
+2. `asignarDesdeEspera` recorre la lista y llama a `crearTurno`.
+3. La primera que entra queda como turno reservado y sale de la lista.
+4. Si ninguna entra, las dos listas quedan igual.
